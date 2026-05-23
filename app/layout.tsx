@@ -8,6 +8,7 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const orbitron = Orbitron({ subsets: ["latin"], variable: "--font-orbitron" });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://robosolution.workshop.vercel.app"),
   title: "Robo Solution",
   description: "Dynamic mechatronics and technical education group",
   icons: {
