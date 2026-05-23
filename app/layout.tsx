@@ -14,22 +14,6 @@ export const metadata: Metadata = {
   icons: {
     icon: "/logo/favicon.png",
   },
-  openGraph: {
-    title: "Robo Solution",
-    description: "Dynamic mechatronics and technical education group",
-    url: "https://robosolution.workshop.vercel.app",
-    siteName: "Robo Solution",
-    images: [
-      {
-        url: "/logo/link-preview.png", // This is the image WhatsApp will pull!
-        width: 1200,
-        height: 630,
-        alt: "Robo Solution Preview Image",
-      },
-    ],
-    locale: "en_US",
-    type: "website",
-  },
 };
 
 export default function RootLayout({
