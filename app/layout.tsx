@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const orbitron = Orbitron({ subsets: ["latin"], variable: "--font-orbitron" });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://robosolution.workshop.vercel.app"),
+  metadataBase: new URL("https://robosolution-workshop.vercel.app"),
   title: "Robo Solution",
   description: "Dynamic mechatronics and technical education group",
   icons: {
@@ -17,11 +17,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Robo Solution",
     description: "Dynamic mechatronics and technical education group",
-    url: "https://robosolution.workshop.vercel.app",
+    url: "https://robosolution-workshop.vercel.app",
     siteName: "Robo Solution",
     images: [
       {
-        url: "https://robosolution.workshop.vercel.app/opengraph-image.jpg",
+        url: "https://robosolution-workshop.vercel.app/opengraph-image.jpg",
         width: 1200,
         height: 630,
         alt: "Robo Solution Preview Image",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Robo Solution",
     description: "Dynamic mechatronics and technical education group",
-    images: ["https://robosolution.workshop.vercel.app/opengraph-image.jpg"],
+    images: ["https://robosolution-workshop.vercel.app/opengraph-image.jpg"],
   },
 };
 
