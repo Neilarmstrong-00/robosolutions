@@ -19,10 +19,12 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: "About", href: "#about" },
-    { name: "Services", href: "#services" },
-    { name: "Track Record", href: "#track-record" },
-    { name: "Contact", href: "#contact" },
+    { name: "About", href: "/#about" },
+    { name: "Services", href: "/#services" },
+    { name: "Track Record", href: "/#track-record" },
+    { name: "Team", href: "/team" },
+    { name: "Gallery", href: "/gallery" },
+    { name: "Contact Us", href: "/contact" },
   ];
 
   return (
@@ -35,23 +37,31 @@ export default function Navbar() {
         <div className="flex justify-between items-center">
           <Link href="/" className="flex items-center group py-2">
             <span className="font-orbitron font-bold text-2xl tracking-wider text-white group-hover:text-robo-cyan transition-colors">
-              ROBO <span className="text-robo-cyan">SOLUTIONS</span>
+              ROBO <span className="text-robo-cyan">SOLUTION</span>
             </span>
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center space-x-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                className="text-sm font-medium text-robo-text hover:text-robo-cyan transition-colors relative group"
-              >
-                {link.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-robo-cyan transition-all group-hover:w-full"></span>
-              </Link>
-            ))}
-          </nav>
+          <div className="hidden md:flex items-center space-x-8">
+            <Link href="/#about" className="text-sm font-medium text-white hover:text-robo-cyan transition-colors tracking-wide uppercase">
+              About
+            </Link>
+            <Link href="/#services" className="text-sm font-medium text-white hover:text-robo-cyan transition-colors tracking-wide uppercase">
+              Services
+            </Link>
+            <Link href="/#track-record" className="text-sm font-medium text-white hover:text-robo-cyan transition-colors tracking-wide uppercase">
+              Track Record
+            </Link>
+            <Link href="/team" className="text-sm font-medium text-white hover:text-robo-cyan transition-colors tracking-wide uppercase">
+              Team
+            </Link>
+            <Link href="/gallery" className="text-sm font-medium text-white hover:text-robo-cyan transition-colors tracking-wide uppercase">
+              Gallery
+            </Link>
+            <Link href="/contact" className="bg-transparent border border-robo-cyan text-robo-cyan px-6 py-2 rounded-full font-medium hover:bg-robo-cyan hover:text-robo-dark transition-all duration-300">
+              Contact Us
+            </Link>
+          </div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center">

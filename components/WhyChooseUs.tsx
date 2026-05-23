@@ -34,8 +34,8 @@ export default function WhyChooseUs() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="font-orbitron text-4xl md:text-5xl font-bold mb-4">
-            Why Choose <span className="text-robo-cyan">Robo Solutions</span>
+          <h2 className="font-orbitron text-3xl md:text-5xl font-bold mb-6">
+            Why Choose <span className="text-robo-cyan">Robo Solution</span>
           </h2>
         </motion.div>
 

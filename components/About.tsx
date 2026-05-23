@@ -2,18 +2,19 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function About() {
   const team = [
     {
       name: "Nilove Mandal",
       role: "Founder & Project Lead",
-      image: "/img/2.png", // Replace this with actual profile image
+      image: "/img/2.png", 
     },
     {
       name: "Prathemesh Ingle",
-      role: "Core Technical Lead",
-      image: "/img/3.png", // Replace this with actual profile image
+      role: "Co-Founder & Core Technical Lead",
+      image: "/img/3.png", 
     },
   ];
 
@@ -34,7 +35,7 @@ export default function About() {
             </h2>
             <div className="space-y-6 text-lg text-robo-text/80 leading-relaxed">
               <p>
-                <strong className="text-white">Robo Solutions</strong> is a dynamic mechatronics and technical education group dedicated to empowering the next generation of engineers. Our core mission is to transform theoretical classroom knowledge into tangible, industry-ready skills.
+                <strong className="text-white">Robo Solution</strong> is a dynamic mechatronics and technical education group dedicated to empowering the next generation of engineers. Our core mission is to transform theoretical classroom knowledge into tangible, industry-ready skills.
               </p>
               <p>
                 Led by a highly focused two-man expert team, we specialize in delivering high-impact, 100% hands-on technical training and managing large-scale engineering symposiums.
@@ -45,32 +46,46 @@ export default function About() {
             </div>
           </motion.div>
 
-          {/* Team Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-            {team.map((member, index) => (
-              <motion.div
-                key={member.name}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="group relative bg-robo-gray rounded-2xl overflow-hidden border border-white/5 hover:border-robo-cyan/30 transition-all duration-300"
-              >
-                <div className="aspect-square relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-t from-robo-dark via-transparent to-transparent z-10"></div>
-                  <Image
-                    src={member.image}
-                    alt={member.name}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500 grayscale group-hover:grayscale-0"
-                  />
-                </div>
-                <div className="absolute bottom-0 left-0 w-full p-6 z-20 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                  <h3 className="font-orbitron font-bold text-xl text-white mb-1">{member.name}</h3>
-                  <p className="text-robo-cyan text-sm font-medium">{member.role}</p>
-                </div>
-              </motion.div>
-            ))}
+          {/* Team Cards and Link */}
+          <div className="flex flex-col space-y-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+              {team.map((member, index) => (
+                <motion.div
+                  key={member.name}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ duration: 0.5, delay: index * 0.2 }}
+                  className="group relative bg-robo-gray rounded-2xl overflow-hidden border border-white/5 hover:border-robo-cyan/30 transition-all duration-300"
+                >
+                  <div className="aspect-square relative overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-t from-robo-dark via-transparent to-transparent z-10"></div>
+                    <Image
+                      src={member.image}
+                      alt={member.name}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500 grayscale group-hover:grayscale-0"
+                    />
+                  </div>
+                  <div className="absolute bottom-0 left-0 w-full p-6 z-20 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                    <h3 className="font-orbitron font-bold text-xl text-white mb-1">{member.name}</h3>
+                    <p className="text-robo-cyan text-sm font-medium">{member.role}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="flex justify-center pt-4"
+            >
+              <Link href="/team" className="px-8 py-3 bg-transparent border-2 border-robo-cyan text-robo-cyan font-bold rounded-full text-lg shadow-[0_0_15px_rgba(0,240,255,0.3)] hover:scale-105 hover:bg-robo-cyan hover:text-robo-dark hover:shadow-[0_0_25px_rgba(0,240,255,0.6)] transition-all duration-300">
+                Meet Our Full Team →
+              </Link>
+            </motion.div>
           </div>
 
         </div>

@@ -42,11 +42,11 @@ export default function Footer() {
 
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-robo-text/60">
           <Link href="/" className="font-orbitron font-bold text-2xl tracking-wider text-white hover:text-robo-cyan transition-colors duration-300">
-            ROBO <span className="text-robo-cyan">SOLUTIONS</span>
+            ROBO <span className="text-robo-cyan">SOLUTION</span>
           </Link>
-          <p>
-            © {new Date().getFullYear()} Robo Solutions. All rights reserved.
-          </p>
+          <div className="text-sm text-robo-text/60">
+            © {new Date().getFullYear()} Robo Solution. All rights reserved.
+          </div>
         </div>
       </div>
     </footer>

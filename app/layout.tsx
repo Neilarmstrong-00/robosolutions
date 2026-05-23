@@ -8,8 +8,8 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const orbitron = Orbitron({ subsets: ["latin"], variable: "--font-orbitron" });
 
 export const metadata: Metadata = {
-  title: "Robo Solutions",
-  description: "Bridging the Gap Between Engineering Theory and Industry Reality.",
+  title: "Robo Solution",
+  description: "Dynamic mechatronics and technical education group",
   icons: {
     icon: "/logo/favicon.png",
   },
