@@ -2,9 +2,9 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Hero() {
-  const mailtoLink = "mailto:nilovemandal@gmail.com,prthmshingle@gmail.com?subject=Workshop%20Booking%20Inquiry%20-%20Robo%20Solutions&body=Hi%20Nilove%20and%20Prathemesh,%0D%0A%0D%0AI%20would%20like%20to%20inquire%20about%20booking%20a%20technical%20workshop/event.%0D%0A%0D%0A[Please%20add%20your%20requirements%20here]%0D%0A%0D%0AThanks!";
 
   return (
     <section className="relative w-full min-h-screen flex items-center justify-center pt-20 overflow-hidden">
@@ -59,13 +59,13 @@ export default function Hero() {
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.5 }}
           className="mt-10"
         >
-          <a
-            href={mailtoLink}
+          <Link
+            href="/contact"
             className="group relative inline-flex items-center justify-center px-8 py-4 font-bold text-robo-dark bg-robo-cyan rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(0,240,255,0.4)]"
           >
             <span className="absolute w-0 h-0 transition-all duration-500 ease-out bg-white rounded-full group-hover:w-56 group-hover:h-56"></span>
             <span className="relative">Book a Workshop</span>
-          </a>
+          </Link>
         </motion.div>
       </div>
 
