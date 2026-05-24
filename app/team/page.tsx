@@ -3,36 +3,44 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Mail, Phone } from "lucide-react";
 
 const founders = [
   {
     name: "Nilove Mandal",
     role: "Founder & Project Lead",
     image: "/img/2.png", 
+    email: "nilovemandal@gmail.com",
   },
   {
     name: "Prathemesh Ingle",
     role: "Co-Founder & Core Technical Lead",
     image: "/img/3.png", 
+    email: "prthmshingle@gmail.com",
   },
 ];
 
 const members = [
   {
-    name: "Sagar Dhanvantre",
+    name: "Sagarsinh Dhannavat",
     role: "Sales & Management",
-    image: "/img/1.png", // Placeholder until real photo is dropped
+    image: "/img/15.jpeg",
+    email: "sgdhannavat@gmail.com",
+    phone: "7588121079",
   },
   {
-    name: "Karan",
+    name: "Karan Dharulkar",
     role: "Sales & Management",
-    image: "/img/1.png", // Placeholder until real photo is dropped
+    image: "/img/17.jpeg",
+    email: "Karandharulkar2612@gmail.com",
+    phone: "93738 86583",
   },
   {
     name: "Hriday Amle",
     role: "Software Developer",
-    image: "/img/1.png", // Placeholder until real photo is dropped
+    image: "/img/16.jpeg",
+    email: "hridayamle123@gmail.com",
+    phone: "97632 68587",
   },
 ];
 
@@ -83,9 +91,21 @@ export default function TeamPage() {
                   className="object-cover group-hover:scale-105 transition-transform duration-500 grayscale group-hover:grayscale-0"
                 />
               </div>
-              <div className="absolute bottom-0 left-0 w-full p-6 z-20 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+              <div className="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-robo-dark via-robo-dark/90 to-transparent z-20 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                 <h3 className="font-orbitron font-bold text-2xl text-white mb-1">{member.name}</h3>
-                <p className="text-robo-cyan text-sm font-medium tracking-wide uppercase">{member.role}</p>
+                <p className="text-robo-cyan text-sm font-medium tracking-wide uppercase mb-3">{member.role}</p>
+                {member.email && (
+                  <a href={`mailto:${member.email}`} className="flex items-center text-robo-text/80 hover:text-white transition-colors text-sm mb-1">
+                    <Mail className="w-4 h-4 mr-2" />
+                    {member.email}
+                  </a>
+                )}
+                {member.phone && (
+                  <a href={`tel:${member.phone.replace(/\s+/g, '')}`} className="flex items-center text-robo-text/80 hover:text-white transition-colors text-sm">
+                    <Phone className="w-4 h-4 mr-2" />
+                    {member.phone}
+                  </a>
+                )}
               </div>
             </motion.div>
           ))}
@@ -112,9 +132,21 @@ export default function TeamPage() {
                   className="object-cover group-hover:scale-105 transition-transform duration-500 grayscale group-hover:grayscale-0"
                 />
               </div>
-              <div className="absolute bottom-0 left-0 w-full p-6 z-20 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+              <div className="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-robo-dark via-robo-dark/90 to-transparent z-20 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                 <h3 className="font-orbitron font-bold text-xl text-white mb-1">{member.name}</h3>
-                <p className="text-robo-cyan text-sm font-medium tracking-wide uppercase">{member.role}</p>
+                <p className="text-robo-cyan text-sm font-medium tracking-wide uppercase mb-3">{member.role}</p>
+                {member.email && (
+                  <a href={`mailto:${member.email}`} className="flex items-center text-robo-text/80 hover:text-white transition-colors text-sm mb-1">
+                    <Mail className="w-4 h-4 mr-2" />
+                    {member.email}
+                  </a>
+                )}
+                {member.phone && (
+                  <a href={`tel:${member.phone.replace(/\s+/g, '')}`} className="flex items-center text-robo-text/80 hover:text-white transition-colors text-sm">
+                    <Phone className="w-4 h-4 mr-2" />
+                    {member.phone}
+                  </a>
+                )}
               </div>
             </motion.div>
           ))}
