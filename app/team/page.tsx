@@ -5,7 +5,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, Mail, Phone } from "lucide-react";
 
-const founders = [
+type TeamMember = {
+  name: string;
+  role: string;
+  image: string;
+  email?: string;
+  phone?: string;
+};
+
+const founders: TeamMember[] = [
   {
     name: "Nilove Mandal",
     role: "Founder & Project Lead",
@@ -20,7 +28,7 @@ const founders = [
   },
 ];
 
-const members = [
+const members: TeamMember[] = [
   {
     name: "Sagarsinh Dhannavat",
     role: "Sales & Management",
